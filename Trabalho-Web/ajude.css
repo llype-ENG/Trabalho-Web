@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0 ;
+    font-family: sans-serif;
+}
+
+.fundo_banner{
+    width:100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(Imgs/Background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.topo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    height: 30vh;
+}
+.topo, h3{
+    font-size: 10px;
+    color: white;
+}
+.cnt_ajuda{
+    display: flex;
+    justify-content: space-between;
+}
+.cx_ajuda{
+    flex-basis:31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 5s;
+}
+.ajuda_opcoes{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.footer{
+    text-align: center;
+    margin: auto;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}

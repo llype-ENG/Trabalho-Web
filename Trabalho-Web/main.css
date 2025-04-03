@@ -1,0 +1,212 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(Imgs/Background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width:85%;
+    margin: auto;
+    padding:35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    border-radius: 50%;
+    width: 120px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content:'';
+    height: 3px;
+    width: 0%;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p{
+    margin:20px auto;
+    font-weight: 100px;
+    line-height: 25px;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #009688;
+    height: 100%;
+    width:0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+
+/*-------------- course ----------------*/
+
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top:100px;
+}
+h1{
+    font-size: 36px;
+    font-weight:600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis:31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+}
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*-------------footer-------------*/
+
+.footer{
+    text-align: center;
+    margin: auto;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+/* Estilo para o tema escuro */
+body.dark-theme {
+    background-color: #121212; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro */
+}
+
+/* Alterar fundo da banner para o tema escuro */
+body.dark-theme .banner {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(Imgs/Background-dark.jpg); /* Alterar imagem de fundo para algo mais apropriado para o tema escuro */
+}
+
+/* Estilo da navbar para tema escuro */
+body.dark-theme .navbar {
+    color: #e0e0e0; /* Texto claro na navbar */
+}
+
+body.dark-theme .navbar ul li a {
+    color: #b0b0b0; /* Links mais claros */
+}
+
+body.dark-theme .navbar ul li:hover::after {
+    background: #80e0a7; /* Cor do efeito de hover */
+}
+
+/* Botões no tema escuro */
+body.dark-theme button {
+    border: 2px solid #80e0a7;
+    color: #e0e0e0; /* Texto do botão claro */
+}
+
+body.dark-theme button:hover {
+    background: #333333; /* Alterar cor do fundo no hover */
+}
+
+/* Estilo para o curso no tema escuro */
+body.dark-theme .course {
+    background-color: #1e1e1e; /* Fundo escuro para a seção */
+    color: #e0e0e0; /* Texto claro */
+}
+
+/* Alterando a cor das colunas no tema escuro */
+body.dark-theme .course-col {
+    background-color: #2e2e2e;
+    color: #e0e0e0; /* Texto claro */
+}
+
+body.dark-theme .footer {
+    color: #e0e0e0;
+}
+
+/* Alterar as cores dos ícones nas redes sociais */
+body.dark-theme .icons i {
+    color: #b0b0b0;
+}
